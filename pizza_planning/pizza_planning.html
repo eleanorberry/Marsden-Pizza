@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Eleanor's Practice Fruit Bowl Task</title>
+		<title>Eleanor's Marsden Pizza Project</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="Description" lang="en" content="ADD SITE DESCRIPTION">
 		<meta name="author" content="ADD AUTHOR INFORMATION">
@@ -14,178 +14,491 @@
 <link rel="stylesheet" href="assets/highlight/styles/tomorrow.css">
 <script src="assets/highlight/highlight.pack.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-       
 
 		<!-- Override CSS file - add your own CSS rules -->
 		<link rel="stylesheet" href="assets/css/styles.css">
+<style>
+    /* Style the tab */
+.tab {
+  overflow: hidden;
+  background-color: rgb(208, 208, 208);
+}
 
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+color: rgb(255,255,255);
+
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: rgb(113,139,159);
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: rgb(56,108,148);
+color: rgb(255,255,255)
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border-top: none;
+background-color: rgb(247, 249, 250);
+}
+.headline-box{
+    background-color: rgb(56,108,148);
+    padding: 30px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+        </style>
 	</head>
 	<body>
 		<div class="container">
-			<div class="header">
-				<h1 class="header-heading">Eleanor's Practice Fruit Bowl Task</h1>
+			<div class="headline-box">
+				<h1 class="nav">Eleanor's Marsden Pizza Project</h1>
 			</div>
 			<div class="nav-bar">
 				<ul class="nav">
-					<li><a href="#">Nav item 1</a></li>
-					<li><a href="#">Nav item 2</a></li>
-					<li><a href="#">Nav item 3</a></li>
-				</ul>
+                    <li><a href="#brief">Brief</a></li>
+                    <li><a href="#base">Base Planning</a></li>
+					<li><a href="#sprint_1">Sprint 1</a></li>
+					<li><a href="#sprint_2">Sprint 2</a></li>
+					<li><a href="#sprint_3">Sprint 3</a></li>
+                    <li><a href="#sprint_4">Sprint 4</a></li>
+                    <li><a href="#sprint_5">Sprint 5</a></li>
+                    <li><a href="#sprint_6">Sprint 6</a></li>
+                    <li><a href="#final_test">Final Test</a></li>
+                    <li><a href="#reflection">Reflection</a></li>
+                    <li><a href="#relimp">Relevant Implications</a></li>
+                </ul>
 			</div>
 			<div class="content">
 
-                
-
-			
-                    
-					<h1>Brief</h1>
+<h1 id="brief">Brief</h1>
+				<p>The purpose of this project is to create a program that would enable Marsden Pizzas to computerise their phone orders. Specifically, to be able to enter customer details,pizza(s) ordered and pick-up or delivery requirements into a computer and have it display the delivery details, itemised order, and total cost in an automated receipt.</p>
+                <p>I also need to make sure that my program complies effectively with relevant implications, particularly cultural, usability, functionality, sustainability and future proofing. Relevant implications are possible effects of a project or assessment could have that you need to plan for. Cultural is making sure that foreign characters are used where appropriate and making sure that nothing is culturally insensitive. Usability is making sure that the program is consistant and easy for the user to use. This can be achieved through connection to real world concepts and effective error prevention through validation and other means. Functionality is whether my program works as it is intended to, as efficiently and reliably as possible. Sustainability and future proofing is making sure that my program is easy to update and fix, as well as being easy to maintain and add new features to. On top of these my program will also make sure to incorporate the relevant implication security as the program requires personal information to be taken and stored as well as the need to add an element of security to the maintenance menu so that only authorised users can change the base information of the program.</p>
 					<hr>
+    <br>
+    <h1 id="base">Base Planning</h1>
 
-				<h1>Initial Project Backlog</h1>
+<div class="col-container">
+
+<div class="row">
+<div class="tab">
+<button class="tablinks h1" onclick="openCity(event, 'brainstorm')">Brainstorm</button>
+<button class="tablinks h1" onclick="openCity(event, 'backlog')">Initial Project Backlog</button>
+<button class="tablinks h1" onclick="openCity(event, 'overview')">Project Overview</button>
+<button class="tablinks h1" onclick="openCity(event, 'menu')">Pizza Menu</button>
+    <button class="tablinks h1" onclick="openCity(event, 'exit')">X</button>
+</div>
+ <div id="brainstorm" class="tabcontent">
+<h3>Brainstorm</h3>
+<img class="img-responsive" src="assets/img/brainstorm.jpeg" alt="">
+
+    <p>At the start of our project we brainstormed all of the different options and ideas for our
+		program that would fulfill our brief, we decided to make a program that first gave the user
+		a menu then gave the user to edit their order as they wish as well as printing off the
+		order's receipt when the order is finalised. As is shown in the picture above we looked at
+		the different ways in which we could make the ordering program functional and easy to use
+		whilst still being considerate towards the user. These included; making sure that the user
+		is asked whether they want their order delivered so that the extra cost can automatically be
+		added to the order, the ability to add or remove pizzas.</p>
+</div>
+    </div>
+<div id="backlog" class="tabcontent">
+<h3>Initial Project Backlog</h3>
 				<img class="img-responsive" src="assets/img/initial_project_backlog.png" alt="">
-				<hr>
-
+</div>
+<div id="overview" class="tabcontent">
+    <h3>Project Overview</h3>
+<img class="img-responsive" src="assets/img/project_overview.png" alt="">
+</div>
+<div id="menu" class="tabcontent">
+<h3>Pizza Menu</h3>
+	<img class="img-responsive" src="assets/img/pizza_menu.png" alt="">
+</div>
+<br>
+</div>
+    <hr>
     <!-- Heading levels -->
-    <h1>Sprint One</h1>
-				<img class="img-responsive" src="assets/img/Sprint_1_menu_and_fruit_review.png" alt="">
-				<h2>Program Plan</h2>
-				<img class="img-responsive" src="assets/img/sprint_one_plan.jpg" alt="">
-				<h2>Sprint One Board in progress</h2>
-				<img class="img-responsive" src="assets/img/sprint_1_process.png" alt="">
-				<h2>Basic test of program</h2>
-				<img class="img-responsive" src="assets/img/sprint_1.png" alt="">
-				<h2>Sprint reflection</h2>
- <p>Reflection (+ anything about relevant implications)</p>
-				<h2>GitHub Push</h2>
+    <h1 id="sprint_1">Sprint One</h1>
 
-				<h2>Backlog Grooming</h2>
-<hr>
-<h1>Sprint Two</h1>
-				<p>Adding or subtracting fruit from the bowl + implication of validation for single letter input</p>
-<p>Plan with data types and restrictions on data input</p>
-<p>Link to data base</p>
-<p>Sample queries</p>
- <p>Reflection (+ anything about relevant implications)</p>
-<hr>
-<h1>Sprint Three</h1>
-				<p>Be able to add a new type of fruit to the program</p>
-<p>Plan with data types and restrictions on data input</p>
-<p>Link to data base</p>
-<p> Query examples with tabees as examples of how the data would be presented</p>
- <p>Reflection (+ anything about relevant implications)</p>
-<hr>
-<h1> Relevant Implications Summary</h1>
- <hr>
- <hr>
+<div class="col-container">
 
+<div class="row">
+<div class="tab">
+<button class="tablinks h1" onclick="openCity(event, 'sprint_1_brief')">Sprint One Brief</button>
+<button class="tablinks h1" onclick="openCity(event, 'sprint_1_plan')">Sprint One Program Plan</button>
+<button class="tablinks h1" onclick="openCity(event, 'sprint_1_board')">Sprint One Board</button>
+  <button class="tablinks h1" onclick="openCity(event, 'sprint_1_test')">Basic test of program</button>
+<button class="tablinks h1" onclick="openCity(event, 'sprint_1_reflection')">Sprint One Reflection</button>
+<button class="tablinks h1" onclick="openCity(event, 'sprint_1_gitpush')">Git Push</button>
+    <button class="tablinks h1" onclick="openCity(event, 'exit')">X</button>
+</div>
+<div id="sprint_1_brief" class="tabcontent">
+<h3>Sprint One Brief</h3>
+	<p>In the first version of my program I will implement a function to print out the available menu for the user and the option to quit. These two options will be presented in a menu format within a seperate function, making it easy to add new options to the menu. This helps my program comply well both the relevant implication sustainability and future proofing as it is easy to edit in future versions. </p>
+</div>
+<div id="sprint_1_plan" class="tabcontent">
+<h3>Sprint One Program Plan</h3>
+    <img class="img-responsive" src="assets/img/program_plan_1.png" alt="">
+    </div>
+<div id="sprint_1_board" class="tabcontent">
+<h3>Sprint One Board</h3>
+	<img class="img-responsive" src="assets/img/sprint_1_process.png" alt="">
+</div>
 
+    <div id="sprint_1_test" class="tabcontent">
+<h3>Basic Test of Program</h3>
+	<img class="img-responsive" src="assets/img/sprint_1.png" alt="">
+    <p>Through the testing of my first sprint of the program, I found that the basic structure of the program works and should provide a good base to build the rest of the program on. I also found that the basic validation for capitalizing all input worked however I will need to build upon this in future versions. </p>
+</div>
+<div id="sprint_1_reflection" class="tabcontent">
+    <h3>Sprint 1 reflection</h3>
+    <br>
+    <p>In the first sprint of my program I found that my program works as expected and as I planned in the project overview. This should provide a good base upon which I can build the rest of the program. On top of this I found that the basic program complies well with the relevant implication sustainability and future proofing as it is easy to edit and add to in future versions because the two options within the menu function are functions within themselves. The basic menu is also easy for the user to understand making sure not to include technology jargon as to take the user into consideration.</p><p>In the next sprint I will add the option to specify whether the user wants to pick up or deliver and add costs to the order accordingly as well as collecting the relevant information. As this step will include collecting quite a bit of user input I will implement validation for any user input so that the program complies better with error prevention and is easier for the user to use. Since some of the information collected in sensitive (such as the address) I will make sure that the user is only asked for it if they have asked to have it delivered keeping the implication security and privacy in mind. </p><p>On top of this I will also make some changes to the program which I saw as a problem in the first sprint these being the fact that there are no column headers on the pizza menu which could be confusing for the user and adding such would make it better comply with usability. I will also add a welcome message for the user which will also help the program be more user-friendly.</p></div></div></div>
+    <div id="sprint_1_gitpush" class="tabcontent">
+        <h3>Github Push</h3>
+        <img class="img-responsive" src="assets/img/gitpush_1.png" alt="">
+                </div>
+    <hr>
+<h1 id="sprint_2">Sprint Two</h1>
+    <div class="col-container">
 
-    <!-- Paragraphs -->
-    <h3>Example of formatted code</h3>
-	
+<div class="row">
+<div class="tab">
+<button class="tablinks h1" onclick="openCity(event, 'sprint_2_brief')">Sprint Two Brief</button>
+<button class="tablinks h1" onclick="openCity(event, 'sprint_2_plan')">Sprint Two Program Plan</button>
+<button class="tablinks h1" onclick="openCity(event, 'sprint_2_board')">Sprint Two Board</button>
+  <button class="tablinks h1" onclick="openCity(event, 'sprint_2_test')">Basic test of program</button>
+    <button class="tablinks h1" onclick="openCity(event, 'sprint_2_reflection')">Sprint Two Reflection</button>
+<button class="tablinks h1" onclick="openCity(event, 'sprint_2_gitpush')">Git Push</button>
+    <button class="tablinks h1" onclick="openCity(event, 'exit')">X</button>
+</div>
+<div id="sprint_2_brief" class="tabcontent">
+<h3>Sprint Two Brief</h3>
+	<p>The second sprint of my program will aim to specify whether the user wants their order picked up or delivered adding the relevant costs to the order and to ask for the relevant information collecting in dictionaries. Since this sprint is dealing with lots of user input I will implement validation to regulate the input so that the program complies well with error prevention. I will also add headings to the menu and a welcome message to make the program more user friendly. </p>
+</div>
+
+<div id="sprint_2_board" class="tabcontent">
+<h3>Sprint Two Board</h3>
+	<img class="img-responsive" src="assets/img/pizza_sprint_2_review.png" alt="">
+</div>
+
+<div id="sprint_2_plan" class="tabcontent">
+<h3>Sprint Two Program Plan</h3>
+    <img class="img-responsive" src="assets/img/plan_2.jpg" alt="">
+    <img class="img-responsive" src="assets/img/val_2.jpg" alt="">
+    </div>
+    
+    <div id="sprint_2_test" class="tabcontent">
+<h3>Basic Test of Program</h3>
+	<img class="img-responsive" src="assets/img/2_test_1.png" alt="">
+        <img class="img-responsive" src="assets/img/2_test_2.png" alt="">
+</div>
+<div id="sprint_2_reflection" class="tabcontent">
+    <h3>Sprint 2 reflection</h3>
+    <br>
+    <p>The aim of my second sprint of the program was to specify whether the user wants their order picked up or delivered adding the relevant costs to the order and ask for the relevant information collecting it in dictionaries. Since this sprint dealt with lots of user input I had to implement validation to regulate the input so that the program complies well with error prevention. <br><br>
+
+First of all, I began by writing the base function for choosing between delivery or pick up all of the information for this sprint was to be collected in a dictionary containing all of the user’s information. I also wrote a function that allows the user to review their information which includes validation to prevent errors such as forgetting to input the information after completing the order and asking the user whether they wish to redo the information if they have already filled it out. I also made sure to make it so that the user can confirm the information that they have given at the end of the delivery/ pick-up function by printing out the information in a dictionary the giving the user the choice to confirm (if they say no the dictionary is cleared and they are given the option to start again or return to the main menu).<br><br>
+
+In this sprint, I found that I was needing to validate lots of new input so I decided to design some flexible validation to fit around all of the varied input I was expecting. The first validation function that I designed was to regulate string input for things such as names and addresses (both of which were required in this sprint), with an insertable message and maximum and minimum length. I then designed a function to regulate integer input requiring much of the same parameters as the string validation whilst ensuring that the input consisted of integers. I also wrote a function that enabled me to quickly ask the user to confirm their input through the use of two options, for example, if I asked the user whether the phone number was correct or not and they have to enter yes or no. This ensures a higher level of user control. The last function that I implemented was to regulate user phone numbers and make sure that they were of the right length.<br><br>
+
+In the next sprint of my program, I will focus on being able to add pizzas to my order as well as being able to review the order. This sprint will also have to include validation as the user cannot add over 5 of a certain type of pizza and the user also has to choose the pizzas from a list that will require input validation. I will also have to ensure user control by enabling the option to confirm the pizzas ordered before they are added.
+ </p></div></div>
+        <hr></div>
+<h1 id="sprint_3">Sprint Three</h1>
+        <div class="col-container">
+
+<div class="row">
+<div class="tab">
+<button class="tablinks h1" onclick="openCity(event, 'sprint_3_brief')">Sprint Three Brief</button>
+<button class="tablinks h1" onclick="openCity(event, 'sprint_3_plan')">Sprint Three Program Plan</button>
+<button class="tablinks h1" onclick="openCity(event, 'sprint_3_board')">Sprint Three Board</button>
+  <button class="tablinks h1" onclick="openCity(event, 'sprint_3_test')">Basic test of program</button>
+<button class="tablinks h1" onclick="openCity(event, 'sprint_3_reflection')">Sprint Three Reflection</button>
+<button class="tablinks h1" onclick="openCity(event, 'sprint_3_gitpush')">Git Push</button>
+    <button class="tablinks h1" onclick="openCity(event, 'exit')">X</button>
+</div>
+<div id="sprint_3_brief" class="tabcontent">
+<h3>Sprint Three Brief</h3>
+	<p>In the third sprint of my program, I will focus on being able to add pizzas to my order as well as being able to review the order. This sprint will also have to include validation as the user cannot add over 5 of a certain type of pizza and the user also has to choose the pizzas from a list that will require input validation. I will also have to ensure user control by enabling the option to confirm the pizzas ordered before they are added. </p>
+</div>
+<div id="sprint_3_board" class="tabcontent">
+<h3>Sprint Three Board</h3>
+	<img class="img-responsive" src="assets/img/pizza_sprint_3_review.png" alt="">
+</div>
+
+    <div id="sprint_3_test" class="tabcontent">
+<h3>Basic Test of Program</h3>
+	<img class="img-responsive" src="assets/img/first_test_sprint_3.png" alt="">
+</div>
+
+<div id="sprint_3_reflection" class="tabcontent">
+    <h3>Sprint 3 reflection</h3>
+    <br>
+    <p>In the first version of my book club database all of the information is presented in a simple spreadsheet
+        under different headings. This first version of the database has multiple large problems that might
+        interfere with the effectiveness of our database, including; free spaces in columns, a book with multiple
+        authors which is categorised underneath one and a general lack of continuity throughout the information.
+        Through compiling the information for this first version of the database we also noticed that we are going
+        to have to address issues like foreign characters in our cultural implications, as well as several implications
+        regarding usability and the efficiency of the database. I also may have to make sure that the information is presented
+        in a consistent format, for example I decided to present the publishing dates of the books in yyyy format to improve
+        readability and consistency. I also made sure that the ISBN number was classified as text instead of an integer to
+        ensure that it is saved in the correct format. I also decided to exclude the information on  the illustrator and
+        series in the first version of the database due to repeating data sets, which I plan on adding in a later version.
+        This will make sure that my database is a lot easier to expand and add new fields to which in turn will make it
+        better comply with the relevant implication future proofing.</p>
+
+    </div></div><hr></div>
                 
+<h1 id="sprint_4">Sprint Four</h1>
+    <div class="col-container">
 
+<div class="row">
+<div class="tab">
+<button class="tablinks h1" onclick="openCity(event, 'sprint_4_brief')">Sprint Four Brief</button>
+<button class="tablinks h1" onclick="openCity(event, 'sprint_4_plan')">Sprint Four Program Plan</button>
+<button class="tablinks h1" onclick="openCity(event, 'sprint_4_board')">Sprint Four Board</button>
+  <button class="tablinks h1" onclick="openCity(event, 'sprint_4_test')">Basic test of program</button>
+    <button class="tablinks h1" onclick="openCity(event, 'sprint_4_reflection')">Sprint Four Reflection</button>
+<button class="tablinks h1" onclick="openCity(event, 'sprint_4_gitpush')">Git Push</button>
+    <button class="tablinks h1" onclick="openCity(event, 'exit')">X</button>
+</div>
+<div id="sprint_4_brief" class="tabcontent">
+<h3>Sprint Four Brief</h3>
+	<p>In the fourth sprint of my program, I would like to input a function that allows the user to edit or remove pizzas from the order. This function would have to validate the pizza chosen to edit as well as send an error message if the specified number of pizzas is in the order that the user isn’t in the order. After choosing to edit the order I would also like to confirm the changes made. This function should also give the user the option to clear the order completely. Much like the customer details option, I will also include validation to ensure that if the order is empty the user will be told to add pizzas first this ensures the relevant implication error prevention. </p>
+</div>
+
+<div id="sprint_4_board" class="tabcontent">
+<h3>Sprint Four Board</h3>
+	<img class="img-responsive" src="assets/img/pizza_sprint_4_review.png" alt="">
+</div>
+
+    <div id="sprint_4_test" class="tabcontent">
+<h3>Basic Test of Program</h3>
+	<img class="img-responsive" src="assets/img/first_test_sprint_4.png" alt="">
+</div>
+<div id="sprint_4_reflection" class="tabcontent">
+    <h3>Sprint 4 reflection</h3>
+    <br>
+    <p>In the first version of my book club database all of the information is presented in a simple spreadsheet
+        under different headings. This first version of the database has multiple large problems that might
+        interfere with the effectiveness of our database, including; free spaces in columns, a book with multiple
+        authors which is categorised underneath one and a general lack of continuity throughout the information.
+        Through compiling the information for this first version of the database we also noticed that we are going
+        to have to address issues like foreign characters in our cultural implications, as well as several implications
+        regarding usability and the efficiency of the database. I also may have to make sure that the information is presented
+        in a consistent format, for example I decided to present the publishing dates of the books in yyyy format to improve
+        readability and consistency. I also made sure that the ISBN number was classified as text instead of an integer to
+        ensure that it is saved in the correct format. I also decided to exclude the information on  the illustrator and
+        series in the first version of the database due to repeating data sets, which I plan on adding in a later version.
+        This will make sure that my database is a lot easier to expand and add new fields to which in turn will make it
+        better comply with the relevant implication future proofing.</p></div></div>
+        <hr></div>
+                
+<h1 id="sprint_5">Sprint Five</h1>
+    <div class="col-container">
+
+<div class="row">
+<div class="tab">
+<button class="tablinks h1" onclick="openCity(event, 'sprint_5_brief')">Sprint Five Brief</button>
+<button class="tablinks h1" onclick="openCity(event, 'sprint_5_plan')">Sprint Five Program Plan</button>
+<button class="tablinks h1" onclick="openCity(event, 'sprint_5_board')">Sprint Five Board</button>
+  <button class="tablinks h1" onclick="openCity(event, 'sprint_5_test')">Basic test of program</button>
+    <button class="tablinks h1" onclick="openCity(event, 'sprint_5_reflection')">Sprint Five Reflection</button>
+<button class="tablinks h1" onclick="openCity(event, 'sprint_5_gitpush')">Git Push</button>
+    <button class="tablinks h1" onclick="openCity(event, 'exit')">X</button>
+</div>
+<div id="sprint_5_brief" class="tabcontent">
+<h3>Sprint Five Brief</h3>
+	<p>In the fifth sprint of my program, I would like to input the option to edit the pizza list, this function will be enclosed in a separate menu protected by a passcode so as to ensure that only those authorised can change the information of the program. This separate ‘maintenance menu’ will require validation to add and remove new pizzas, change the details of certain pizzas such as the price. This function will also require confirmation for the changes made to the program. </p>
+</div>
+
+<div id="sprint_5_board" class="tabcontent">
+<h3>Sprint Five Board</h3>
+	<img class="img-responsive" src="assets/img/pizza_sprint_5_review.png" alt="">
+</div>
+
+    <div id="sprint_5_test" class="tabcontent">
+<h3>Basic Test of Program</h3>
+	<img class="img-responsive" src="assets/img/first_test_sprint_5.png" alt="">
+</div>
+<div id="sprint_5_reflection" class="tabcontent">
+    <h3>Sprint 5 reflection</h3>
+    <br>
+    <p>In the first version of my book club database all of the information is presented in a simple spreadsheet
+        under different headings. This first version of the database has multiple large problems that might
+        interfere with the effectiveness of our database, including; free spaces in columns, a book with multiple
+        authors which is categorised underneath one and a general lack of continuity throughout the information.
+        Through compiling the information for this first version of the database we also noticed that we are going
+        to have to address issues like foreign characters in our cultural implications, as well as several implications
+        regarding usability and the efficiency of the database. I also may have to make sure that the information is presented
+        in a consistent format, for example I decided to present the publishing dates of the books in yyyy format to improve
+        readability and consistency. I also made sure that the ISBN number was classified as text instead of an integer to
+        ensure that it is saved in the correct format. I also decided to exclude the information on  the illustrator and
+        series in the first version of the database due to repeating data sets, which I plan on adding in a later version.
+        This will make sure that my database is a lot easier to expand and add new fields to which in turn will make it
+        better comply with the relevant implication future proofing.</p></div></div>
+        <hr></div>
+                
+<h1 id="sprint_6">Sprint Six</h1>
+    <div class="col-container">
+
+<div class="row">
+<div class="tab">
+<button class="tablinks h1" onclick="openCity(event, 'sprint_6_brief')">Sprint Six Brief</button>
+<button class="tablinks h1" onclick="openCity(event, 'sprint_6_plan')">Sprint Six Program Plan</button>
+<button class="tablinks h1" onclick="openCity(event, 'sprint_6_board')">Sprint Six Board</button>
+  <button class="tablinks h1" onclick="openCity(event, 'sprint_6_test')">Basic test of program</button>
+    <button class="tablinks h1" onclick="openCity(event, 'sprint_6_reflection')">Sprint Six Reflection</button>
+<button class="tablinks h1" onclick="openCity(event, 'sprint_6_gitpush')">Git Push</button>
+    <button class="tablinks h1" onclick="openCity(event, 'exit')">X</button>
+</div>
+<div id="sprint_6_brief" class="tabcontent">
+<h3>Sprint Six Brief</h3>
+	<p>The sixth sprint in my program will print out a receipt for the order with all relevant details and instructions formatted and printed off when the order is finalised. When finalising the order the user will be asked to confirm and if there are any missing details such as customer information they will be asked to return and fill it out before finishing the order. This sprint will also serve to ensure that there are no bugs or small errors with the program. </p>
+</div>
+
+<div id="sprint_6_board" class="tabcontent">
+<h3>Sprint Six Board</h3>
+	<img class="img-responsive" src="assets/img/pizza_sprint_6_review.png" alt="">
+</div>
+
+    <div id="sprint_6_test" class="tabcontent">
+<h3>Basic Test of Program</h3>
+	<img class="img-responsive" src="assets/img/first_test_sprint_6.png" alt="">
+</div>
+<div id="sprint_6_reflection" class="tabcontent">
+    <h3>Sprint 6 reflection</h3>
+    <br>
+    <p>In the first version of my book club database all of the information is presented in a simple spreadsheet
+        under different headings. This first version of the database has multiple large problems that might
+        interfere with the effectiveness of our database, including; free spaces in columns, a book with multiple
+        authors which is categorised underneath one and a general lack of continuity throughout the information.
+        Through compiling the information for this first version of the database we also noticed that we are going
+        to have to address issues like foreign characters in our cultural implications, as well as several implications
+        regarding usability and the efficiency of the database. I also may have to make sure that the information is presented
+        in a consistent format, for example I decided to present the publishing dates of the books in yyyy format to improve
+        readability and consistency. I also made sure that the ISBN number was classified as text instead of an integer to
+        ensure that it is saved in the correct format. I also decided to exclude the information on  the illustrator and
+        series in the first version of the database due to repeating data sets, which I plan on adding in a later version.
+        This will make sure that my database is a lot easier to expand and add new fields to which in turn will make it
+        better comply with the relevant implication future proofing.</p></div></div>
+        <hr></div>
+
+    <script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+<h1 id="final_test">Comprehensive Test</h1>
+<p>This is the final test of the program. + code warrant of fitness</p>
+                <hr>
+<h1 id="reflection">Reflection</h1>
+
+ <p>Discussing how the information from planning, testing and trialling of components assisted in the development of a high-quality outcome.
+<br><br>
+What did you learn from  using your project management method, version control system, trailing and testing processes. How has this made your outcome better than it otherwise would have been?
+</p>
+        <hr>
+<h1 id="relimp"> Relevant Implications Summary</h1>
+ <br>
+<div class="row">
+<div class="tab">
+<button class="tablinks h1" onclick="openCity(event, 'cultural')">Cultural</button>
+    <button class="tablinks h1" onclick="openCity(event, 'usability')">Usability</button>
+    <button class="tablinks h1" onclick="openCity(event, 'functionality')">Functionality</button>
+      <button class="tablinks h1" onclick="openCity(event, 'future-proofing')">Sustainability and Future Proofing </button>
+  <button class="tablinks h1" onclick="openCity(event, 'end-user')">End User Considerations</button>
+    <button class="tablinks h1" onclick="openCity(event, 'exit')">X</button>
+    </div>
+
+<div id="cultural" class="tabcontent">
+    <h3>Cultural</h3>
+<p>In order to make sure that my database complies with the relavant implication cultural, I will use foreign characters and make sure that nothing is culturally insensitive.I made sure that my database was culturally appropriate through incorporating foreign characters that featured in the data set; for example the author Charlotte Brontë. I also ensured my compliance with this implication through checking for the correct spelling and punctuation of all the books and names featured in the database, to both ensure that the database is functional and respectful.</p>
 
 <pre style="font-size: 1.5em;">
-<code class="Python">
-# interesting comment
-def review_fruit(l):
-    for x in l:
-        output = "{:&le; 10} -- {: &gt;4}".format(x[0], x[1])
-        print(output)
-    return None
+<code class="SQL">
+select book_table.book_title "Title",  author_table.first_name "First Name", author_table.last_name "Last Name"
+from book_table
+join association_author on association_author.book_ID = book_table.book_ID
+join author_table on association_author.author_ID=author_table.author_ID
+where author_table.last_name like "Bront%"
 </code>
 </pre>
+<p>Therefore proving that my database complies with the relevant implication cultural and End User considerations.</p>
+    </div>
+<div id="usability" class="tabcontent">
+    <h3>Usability</h3>
+<p>In my program I addressed the relevant iplication usability through making it easy to review and edit information. For example when using the program the user has to input personal information such as their name, phone-number and address, the program asks the user to confirm the information that they have inputted as well as giving the option to redo the options if they want to. My program also offers the option for the user to edit their order, I used these features to experiment with the flexibility of my program and how well it complies with the relevant implication future proofing and error prevention. I did this by making sure that my program is easy to update and add to as well as being easily fixable if there are errors. </p> 
+    </div>
+<div id="functionality" class="tabcontent">
+    <h3>Functionality</h3>
+<p>Through looking at my database I realised that there was an error in one of my sets of data, this being that the publishing date of The Testaments by Margaret Atwood was incorrect. I fixed this through the use of an update query. I used this error to experiment with the flexibility of my database and how well it complies with the relevant implication future proofing and . I did this by making sure that my database is easy to update and add to as well as being easily fixable if there are errors.Another way that I ensure that my database complied with this database was that I made sure that it was also easy to edit or delete information, as can be shown through the queries to delete all references of a particular aspect of the database.</p>
+    </div>
 
-  <h3>Table in case you need</h3>              
-<table class="my-table"><tr><th>Tracks</th><th>Album</th><th>Artist</th></tr><tr><td>Rosalyn</td><td>Night moves</td><td>Bob Seger</td></tr><tr><td>Rock n' Roll Music</td><td>Rock n' Roll Music</td><td>The Beatles</td></tr><tr><td>Roll Over Beethoven</td><td>Rock n' Roll Music</td><td>The Beatles</td></tr><tr><td>Right Down The Lane</td><td>City to City</td><td>Gerry Rafferty</td></tr><tr><td>Ramblin Man</td><td>Brothers and Sister</td><td>The Allman Brothers Band</td></tr><tr><td>Rocket Man (I think it's going to be a long, long time)</td><td>Honky Chateau</td><td>Elton John</td></tr></table>
-                
-            <hr>     
-                
-                <h3>Example paragraph</h3>
-					<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-					<hr>
+<div id="future-proofing" class="tabcontent">
+    <h3>Sustainability and Future Proofing</h3>
+<p>Through looking at my database I realised that there was an error in one of my sets of data, this being that the publishing date of The Testaments by Margaret Atwood was incorrect. I fixed this through the use of an update query. I used this error to experiment with the flexibility of my database and how well it complies with the relevant implication future proofing and . I did this by making sure that my database is easy to update and add to as well as being easily fixable if there are errors.Another way that I ensure that my database complied with this database was that I made sure that it was also easy to edit or delete information, as can be shown through the queries to delete all references of a particular aspect of the database.</p>
+    </div>
 
-					<!-- Responsive images -->
-					<h3>Example image placements</h3>
-					<p>For images to be responsive (so that they will rescale to suit the width of the parent, use the <code>.img-responsive</code> class.</p>
-					<img class="img-responsive" src="assets/img/place_holder.png" alt="">
-                <hr>
-                <div class="col-container">
-                <div class="col">
-               <img class="img-responsive" src="assets/img/place_holder_sm.jpg" alt="">
-                <p>Ut wisi enim ad minim veniam, <a href="#">quis nostrud exerci tation ullamcorper</a> suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel.</p>
-                </div>
-                 <div class="col">
-                <img class="img-responsive" src="assets/img/place_holder_sm.jpg" alt="">
-                <p>Ut wisi enim ad minim veniam, <a href="#">quis nostrud exerci tation ullamcorper</a> suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel.</p>
-                </div>
-                </div>
-                <hr>
-               
-              
+<div id="end-user" class="tabcontent">
+    <h3>End User Considerations</h3>
+<p>I addressed the relevant implication end user considerations through the use of aliases in my tables to present the information in my database in a way that is easier for the user to comprehend by utilising language that is readily understood. This also improves the aesthetic and minimalist design of the database ensuring that it appeals to the users eye and doesn’t confuse or distract from the purpose of the system.</p>
 
-					<!-- Lists -->
-					<h3>Unordered list</h3>
-					<p>Unordered lists are used to markup lists where list items do not require numbering.</p>
-					<ul>
-						<li>Ut wisi enim ad minim veniam</li>
-						<li>Quis nostrud exerci tation</li>
-						<li>Lamcorper suscipit lobortis nis</li>
-						<li>Ut aliquip ex ea commodo consequat</li>
-						<li>Duis autem vel eum iriure dolor</li>
-					</ul>
-					<hr>
+    </div>
+    </div>
+    <hr>
+    <h2>Notes on privacy and data integrity</h2>
 
-					<h3>Ordered list</h3>
-					<p>Ordered lists are used to markup lists where list items require numbering.</p>
-					<ol>
-						<li>Hendrerit in vulputate velit esse</li>
-						<li>Olestie consequat</li>
-						<li>Vel illum dolore eu feugiat</li>
-						<li>Nulla facilisis at vero eros</li>
-						<li>Accumsan et iusto odio</li>
-					</ol>
-					<hr>
+    <p>Due to the fact that some of the information collected in my program is sensitive particulary user details such as addresses, phone numbers and names, I decided that precautions should be added to ensure the user's privacy. One of the first things that I did was to make sure that the program doesn't ask for any more information than is relevant according to the user's choice, for example when specifying the method of delivery if the user chooses pick-up they will not be asked for their number or address. Since this information isn't collected and stored within the program the user's information is deleted as soon as the order has been completed and the program has been restarted. I also addressed the integrity of the program through amking sure that only those authorized can edit information such as the pizza menu through the use of a passcode. Another thing that I did to ensure the integrity of the program was to ensure that the data collected within the program in accurate and consistant. I did this through adding restrictions to the data types, eg. column asking for date will only accept integers to contol user input.</p>
 
-					<h3>Unstyled list</h3>
-					<p>You can make the list unstyled using the <code>list-unstyled</code> class.</p>
-					<ul class="list-unstyled">
-						<li>Ut wisi enim ad minim veniam</li>
-						<li>Quis nostrud exerci tation</li>
-						<li>Lamcorper suscipit lobortis nis</li>
-						<li>Ut aliquip ex ea commodo consequat</li>
-						<li>Duis autem vel eum iriure dolor</li>
-					</ul>
-					<hr>
+    <script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
 
-					<h3>Inline list</h3>
-					<p>You can make the list display inline using the <code>list-inline</code> class.</p>
-					<ul class="list-inline">
-						<li>One</li>
-						<li>Two</li>
-						<li>Three</li>
-						<li>Four</li>
-					</ul>
-					<hr>
-
-				
-
-					<h3>Buttons</h3>
-					<p>You can apply the <code>btn</code> class to any element that requires a button style.</p>
-					<p><a href="#" class="btn">Submit</a></p>
-					<hr>
+ <hr>
 
 
-
-               
-            
-
-			
 			</div>
 			<div class="footer">
 				&copy; Copyright 2021
 			</div>
-		</div>
+        </div>
 	</body>
 </html>

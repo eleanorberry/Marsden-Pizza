@@ -5,9 +5,9 @@ def get_integer(m, min, max):
         # asks for number
         my_number = int(input(m))
         # checks that number is an integer
-        if my_number.isnumeric() is False:
+        '''if my_number.isnumeric() is False:
             print("Please enter an integer")
-            continue
+            continue'''
         if my_number < min:
             print("The value is too low")
             continue
@@ -105,7 +105,7 @@ def print_menu_indexes(m):
     # Print the menu with index numbers
     print("-" * 80)
     for i in range(0, len(m)):
-        output = "{} {} {}".format(i, m[i][0], m[i][1])
+        output = "{:<5}{:20}${:<10.2f}".format(i, m[i][0], m[i][1])
         print(output)
 
 
@@ -178,22 +178,93 @@ def delivery_pickup(d, c):
                 continue
 
 
+def check_name_present(o, n):
+    # Check if a name is already in the pizza list
+    # o: order list
+    # n: choice name
+    for i in range(0, len(o)):
+        if o[i][0] == n:
+            message = "{} is already present at index number {}".format(n, i)
+            print(message)
+            return i
+
+
+def search(P, pizza):
+    for i in range(0, len(L)):
+        output = "{} {}".format(L[i][0], fruit)
+        print(output)
+        if L[i][0] == fruit:
+            print("Your fruit choice is already in the list, sorry")
+            return i
+
+
+def print_order(o, e):
+    # Print out the current pizza order
+    # o: list (row column) of the the current customer order
+    # e: integer greater than 0 :
+    total = 0
+    for i in range(0, len(o)):
+        # x **** at $**** sub total = $*****
+        sub_total = o[i][1]*o[i][2]
+        total += sub_total
+        # Quantity , Pizza , Cost , subtotal
+        my_string = "{:^5}{:<20} at ${:<8.2f} = ${:<8.2f}".format(o[i][2], o[i][0], o[i][1], sub_total)
+        print(my_string)
+    total += e
+    my_string = "{:^5}${:<8.2f}".format("Total cost: ", total)
+    print(my_string)
+
+
+def add_pizza(p, order, max):
+    # Add a pizza to the customer order
+    message = "Please choose an option: "
+    choice = get_integer(message, 0, len(p))
+    pizza_name = p[choice][0]
+    price = p[choice][1]
+    result = check_name_present(order, pizza_name)
+    # message = "You have {} of the {} in the order".format(order[result][2], pizza_name)
+    print(message)
+    available_pizza = max - order[result][2]
+    print(available_pizza)
+    # message = "You can order a maximum of {} more".format(max - order[result][2])
+    print(message)
+    message = "How many more {} would you like?  "
+    amount_string = message.format(pizza_name)
+    amount = get_integer(amount_string, 0, max)
+    if amount > available_pizza:
+        order_list = [pizza_name, price, amount]
+        order.append(order_list)
+        confirmation_message = "{} {} have been added to the order".format(amount, pizza_name)
+        print(confirmation_message)
+        print(order)
+    else:
+        print("Sorry")
+
+
 def main():
     # main function that runs the program
+    # variables
+    regular = 18.5
+    gourmet = regular + 7
+    max_pizza = 5
+    # dictionary containing pizzas, prices, and number of pizzas
+    order = []
     customer_info = {}
     cost = 0
     menu = [
-        ["Margarita", 18.50],
-        ["Pepperoni", 18.50],
-        ["Hawaiian", 18.50]
+        ["Margarita", regular],
+        ["Pepperoni", regular],
+        ["Hawaiian", regular]
     ]
     option = '''
     A: Review menu
     B: Choose method of collection
     C: See customer details
+    D: Add Pizza
+    E: Review Order
     Q: Quit
     '''
-    menu_choice = ["A", "B", "C", "Q"]
+    menu_choice = ["A", "B", "C", "D", "E", "Q"]
     menu_m = "Please enter an option: "
     run = True
     print("Starting new order")
@@ -209,6 +280,11 @@ def main():
             delivery_pickup(customer_info, cost)
         elif choice == "C":
             print_info(customer_info, cost)
+        elif choice == "D":
+            print_menu_indexes(menu)
+            add_pizza(menu, order, max_pizza)
+        elif choice == "E":
+            print_order(order, cost)
         elif choice == "Q":
             print("Thank you")
             run = False
