@@ -187,6 +187,7 @@ def check_name_present(o, n):
             message = "{} is already present at index number {}".format(n, i)
             print(message)
             return i
+    return -1
 
 
 def search(P, pizza):
@@ -222,23 +223,30 @@ def add_pizza(p, order, max):
     pizza_name = p[choice][0]
     price = p[choice][1]
     result = check_name_present(order, pizza_name)
-    # message = "You have {} of the {} in the order".format(order[result][2], pizza_name)
-    print(message)
-    available_pizza = max - order[result][2]
-    print(available_pizza)
-    # message = "You can order a maximum of {} more".format(max - order[result][2])
-    print(message)
-    message = "How many more {} would you like?  "
-    amount_string = message.format(pizza_name)
-    amount = get_integer(amount_string, 0, max)
-    if amount > available_pizza:
+    if result == -1:
+        message = "How many {} would you like?  "
+        amount_string = message.format(pizza_name)
+        amount = get_integer(amount_string, 0, max)
         order_list = [pizza_name, price, amount]
         order.append(order_list)
         confirmation_message = "{} {} have been added to the order".format(amount, pizza_name)
         print(confirmation_message)
-        print(order)
+        return None
+        #proceed as normal
+
     else:
-        print("Sorry")
+        message = "You already have {} of the {} in the order".format(order[result][2], pizza_name)
+        print(message)
+        available_pizza = max - order[result][2]
+        print(available_pizza)
+        message = "You can order a maximum of {} more".format(max - order[result][2])
+        print(message)
+        message = "How many more {} would you like?  "
+        amount_string = message.format(pizza_name)
+        amount = get_integer(amount_string, 0, available_pizza)
+        order[result][2] += amount
+        print(order)
+
 
 
 def main():
