@@ -105,31 +105,35 @@ def get_phone_number():
 # add a new type of pizza to the list
 def add_new_pizza(d):
     print("Start adding new entry.")
-    pizza_name = get_string("What is the name of the pizza you would like to add?: ", 15, 2)
-    i = check_name_present(d, pizza_name)
-    print(i)
+    number_pizza = get_integer("How many different types of pizza would you like to add?: ", 0, 10)
+    for i in range(number_pizza):
+        pizza = get_string("What is the Pizza that you would like to add? ", 15, 2)
+        price = get_entry_option_list("What price would you like to allocate to this pizza regular ($18,50) or gourmet ($25.50)? :", ["R", "G"])
+        i = check_name_present(d, pizza)
+        print(i)
     if i:
-        L[i][1] += amount
-        print_menu_indexes(d)
+        print("Sorry that Pizza already exists on the menu.")
     else:
-        price = get_integer("What is the price of the pizza?: ")
-        description = get_string("Please enter the description for the new pizza: ")
-        new_list = [pizza_name, price, description]
-        d.append(new_list)
+        if price == "R":
+            new_list = [pizza]
+            d[pizza] = "Regular"
+            print_menu_indexes(d)
+        if price == "G":
+            new_list = [pizza]
+            d[pizza] = "Gourmet"
+            print_menu_indexes(d)
 
 
 def remove_pizza(menu):
-    print_with_indexes(menu)
-    my_index = get_integer("Please enter the index number of the pizza you want to remove: ")
-    w
-    new_list = [name, hair_colour, age]
-    L.append(new_list)
+    print_menu_indexes(menu)
+    # my_index = get_integer("Please enter the index number of the pizza you want to remove: ")
+    print("This is the remove function")
 
 
-def update_pizza_name(d):
+def update_pizza_name(d, p):
     print_menu_indexes(d)
-    my_index = get_integer("Please enter the index number of the pizza you want to update the name of: ")
-    new_name = get_string("Please enter the new name: ")
+    my_index = get_integer("Please enter the index number of the pizza you want to update the name of: ",  0, len(p) - 1)
+    new_name = get_string("Please enter the new name: ", 20, 2)
     old_name = d[my_index][0]
     d[my_index][0] = new_name
     output_message = "{} has now been changed to {}.".format(old_name, new_name)
@@ -171,7 +175,7 @@ def update_menu(d):
 def maintenance_function(d):
     username = input("Please enter your username: ")
     password = input("Please enter your password: ")
-    if username == "marsdenpizza" and password == "marsdenpizza":
+    if username == "m" and password == "m":
         print("Welcome to the maintenance menu")
         option = '''
         A: Add Pizza
@@ -187,7 +191,6 @@ def maintenance_function(d):
         while run is True:
             print(option)
             choice = get_specific_input(menu_m, menu_choice)
-            choice = choice.upper()
             print("-" * 80)
             if choice == "A":
                 add_new_pizza(d)
